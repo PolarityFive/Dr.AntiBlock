@@ -21,8 +21,6 @@ collision()
 				if( self != player && self.sessionstate == "dead" || self.sessionstate == "spectator" || self.sessionstate != "playing")
 				{
 					self thread Respawn();
-					self iPrintlnBold( "^3Anti-Block 1.2 Activated" );
-					self iPrintln( "^0[^3Admin^0]^3^4Antiblock Create by ^4V!Ru$w4T" );
 					wait .05;
 					if(self.pers["team"] == "spectator")
 					{
@@ -40,6 +38,5 @@ Respawn()
   {
   self thread braxi\_teams::setTeam( "allies" );
   self thread braxi\_mod::spawnPlayer();
-  self iPrintln( "^0[^2Admin^0]^1:^3R^7espawned^3!" );
   }
 } 
